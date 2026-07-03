@@ -1,0 +1,17 @@
+# Docker Compose definition for the QR Code Generator.
+# Running 'docker compose up' builds the image from the local Dockerfile,
+# configures the app through environment variables, mounts the local
+# qr_codes/ directory so generated images persist on the host, and runs
+# the app against the NJIT homepage.
+services:
+  qr_code_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - QR_CODE_DIR=/app/qr_codes   # where the app saves images inside the container
+      - FILL_COLOR=red              # QR code foreground color
+      - BACK_COLOR=white            # QR code background color
+    volumes:
+      - ./qr_codes:/app/qr_codes    # maps local 'qr_codes' to '/app/qr_codes' in the container
+    command: --url http://www.njit.edu   # overrides the Dockerfile's default CMD

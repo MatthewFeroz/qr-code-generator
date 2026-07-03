@@ -1,0 +1,23 @@
+# Container run evidence — captured Fri Jul  3 11:53:40 EDT 2026
+
+$ docker build -t qr-code-generator-app .
+  (build succeeded — image sha256:9bc70389c986...)
+
+$ docker run -d --name qr-generator qr-code-generator-app
+$ docker logs qr-generator
+2026-07-03 15:52:58,186 - INFO - QR code successfully saved to /app/qr_codes/QRCode_20260703155258.png
+
+$ docker run -d --name qr-generator-njit -v $PWD/qr_codes:/app/qr_codes qr-code-generator-app --url http://www.njit.edu
+$ docker logs qr-generator-njit
+2026-07-03 15:53:15,661 - INFO - QR code successfully saved to /app/qr_codes/QRCode_20260703155315.png
+
+$ docker ps -a --filter name=qr-generator
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS                      PORTS     NAMES
+12bad143cf92   qr-code-generator-app   "python main.py --ur…"   29 seconds ago   Exited (0) 24 seconds ago             qr-generator-njit
+7662e16a8bc8   qr-code-generator-app   "python main.py --ur…"   43 seconds ago   Exited (0) 41 seconds ago             qr-generator
+
+$ ls -la qr_codes/  (host directory populated via volume mount)
+total 8
+drwxr-xr-x@  3 ahmadulaferoz  staff    96 Jul  3 11:53 .
+drwxr-xr-x@ 16 ahmadulaferoz  staff   512 Jul  3 11:53 ..
+-rw-r--r--   1 ahmadulaferoz  staff  1569 Jul  3 11:53 QRCode_20260703155315.png
