@@ -106,3 +106,15 @@ docker run --rm -v "$PWD/qr_codes:/app/qr_codes" \
 ## Evidence
 
 - Captured container run logs: [`docs/evidence/container-logs.txt`](docs/evidence/container-logs.txt)
+
+### Container logs (terminal)
+
+![Container logs in the terminal](docs/screenshots/container-logs-terminal.jpg)
+
+### Container logs (Docker Desktop)
+
+![Container logs in Docker Desktop](docs/screenshots/container-logs-docker-desktop.jpg)
+
+### GitHub Actions workflow run
+
+![Successful GitHub Actions run](docs/screenshots/github-actions-workflow.jpg)
