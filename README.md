@@ -106,4 +106,3 @@ docker run --rm -v "$PWD/qr_codes:/app/qr_codes" \
 ## Evidence
 
 - Captured container run logs: [`docs/evidence/container-logs.txt`](docs/evidence/container-logs.txt)
-- Reflection document: [`docs/reflection.md`](docs/reflection.md)
