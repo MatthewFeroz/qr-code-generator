@@ -42,7 +42,7 @@ Build the image:
 docker build -t qr-code-generator-app .
 ```
 
-Run a container with the default URL (https://www.youtube.com/@MattFeroz/videos):
+Run a container with the default URL (https://news.ycombinator.com):
 
 ```bash
 docker run -d --name qr-generator qr-code-generator-app
