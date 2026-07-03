@@ -26,4 +26,4 @@ USER myuser
 # ENTRYPOINT fixes the executable; CMD supplies default arguments that
 # can be overridden at 'docker run' time (e.g. --url http://www.njit.edu).
 ENTRYPOINT ["python", "main.py"]
-CMD ["--url", "http://github.com/kaw393939"]
+CMD ["--url", "https://www.youtube.com/@MattFeroz/videos"]

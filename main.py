@@ -128,7 +128,7 @@ def main():
     """
     # Set up command-line argument parsing
     parser = argparse.ArgumentParser(description='Generate a QR code.')
-    parser.add_argument('--url', help='The URL to encode in the QR code', default='https://github.com/kaw393939')
+    parser.add_argument('--url', help='The URL to encode in the QR code', default='https://www.youtube.com/@MattFeroz/videos')
     args = parser.parse_args()
 
     # Initial logging setup

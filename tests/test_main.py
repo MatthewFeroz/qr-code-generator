@@ -15,7 +15,7 @@ import main
 def test_is_valid_url_accepts_well_formed_url():
     """A syntactically valid http/https URL should pass validation."""
     assert main.is_valid_url("https://www.njit.edu") is True
-    assert main.is_valid_url("http://github.com/kaw393939") is True
+    assert main.is_valid_url("https://www.youtube.com/@MattFeroz/videos") is True
 
 
 def test_is_valid_url_rejects_malformed_url():
