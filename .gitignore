@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variable files (never commit secrets)
+.env
+
+# Generated application output
+qr_codes/
+logs/
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS / editor files
+.DS_Store
+.idea/
+.vscode/

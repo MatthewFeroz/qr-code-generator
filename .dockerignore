@@ -1,0 +1,16 @@
+# Keep the Docker build context small and free of secrets/artifacts.
+.git
+.gitignore
+.github
+__pycache__
+*.py[cod]
+venv
+.venv
+.env
+qr_codes
+logs
+.pytest_cache
+tests
+docs
+README.md
+.DS_Store
